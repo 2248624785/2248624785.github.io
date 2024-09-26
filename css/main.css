@@ -1,0 +1,2837 @@
+@charset "UTF-8";
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+nav ul, li {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none;
+  color: #148CDD;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #EF5781;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input, select {
+  vertical-align: middle;
+}
+
+/* =====================================================================================
+  common class
+
+  update: 13/12/15
+  
+  memo  : 
+        通常フォント：font-size: 13px -> line-height: 22px; 
+        見出し：    font-size: 30px -> line-height: ---; margin: ---; padding: 40px 0 30px;
+        中見出し： font-size: 16px -> line-height: inherit;
+
+        ・line-heightは個別に指定（余白やマージンがズレるため）
+        
+        @include size(0,0);
+        @include absolute(0,0,0);
+        @extend .clearfix;
+        background: url("../img/bg_frame.png") repeat-y center top;
+        background: url("../img/top/main_visual.jpg") no-repeat center top;
+
+====================================================================================== */
+.clearfix:after, #header:after, #footer:after, #top #block02:after, #top #block02 .news-box .news-inner li:after, #top #block03:after, #top #block03 .banner-list:after, #character #main .title-tabs:after, #character #sub-chara ul:after, #fc #main .fc-box:after, #fc #main .keyword-box:after, #gallery #main .gallery-list:after, #special #main .special-list:after, #campaign #main .campaign-list:after, #campaign-pop .pop-inner .pop-box:after {
+  content: ".";
+  display: block;
+  visibility: hidden;
+  height: 0.1px;
+  font-size: 0.1em;
+  line-height: 0;
+  clear: both;
+}
+
+/* IE7pfloat */
+.clearfix, #header, #footer, #top #block02, #top #block02 .news-box .news-inner li, #top #block03, #top #block03 .banner-list, #character #main .title-tabs, #character #sub-chara ul, #fc #main .fc-box, #fc #main .keyword-box, #gallery #main .gallery-list, #special #main .special-list, #campaign #main .campaign-list, #campaign-pop .pop-inner .pop-box {
+  display: inline-block;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix, * html #header, * html #footer, * html #top #block02, #top * html #block02, * html #top #block02 .news-box .news-inner li, #top #block02 .news-box .news-inner * html li, * html #top #block03, #top * html #block03, * html #top #block03 .banner-list, #top #block03 * html .banner-list, * html #character #main .title-tabs, #character #main * html .title-tabs, * html #character #sub-chara ul, #character #sub-chara * html ul, * html #fc #main .fc-box, #fc #main * html .fc-box, * html #fc #main .keyword-box, #fc #main * html .keyword-box, * html #gallery #main .gallery-list, #gallery #main * html .gallery-list, * html #special #main .special-list, #special #main * html .special-list, * html #campaign #main .campaign-list, #campaign #main * html .campaign-list, * html #campaign-pop .pop-inner .pop-box, #campaign-pop .pop-inner * html .pop-box {
+  height: 1%;
+}
+
+/* End hide from IE-mac */
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #FFFFFF;
+}
+
+a {
+  outline: none;
+}
+
+#htmlContainer {
+  font-size: 12px;
+  color: #333333;
+  font-family: Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", Heiti, "黑体", sans-serif;
+  min-width: 980px;
+  overflow: hidden;
+  background-color:#ffffff;
+}
+
+.inner {
+  margin: 0 auto;
+  position: relative;
+  width: 980px;
+}
+
+.inner940 {
+  margin: 0 auto;
+  position: relative;
+  width: 940px;
+  text-align: left;
+  }
+
+.inner900 {
+  margin: 0 auto;
+  position: relative;
+  width: 900px;
+	  padding:0 19 0 19px;
+  text-align: left;
+  overflow:hidden;
+  background-color:#FFFFFF;
+  
+}
+
+.sp {
+  display: none;
+}
+
+#analyze {
+  height: 0;
+  min-height: 0;
+  font-size: 0;
+  line-height: 0;
+  opacity: 0;
+}
+
+/*================================================================================
+  HEADER
+================================================================================*/
+#header {
+  width: 100%;
+  padding-top: 25px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
+}
+#header h1 {
+  width: 283px;
+  float: left;
+}
+#header #glnav {
+  width: 650px;
+  float: right;
+}
+#header #glnav li {
+  float: left;
+}
+
+#tweet {
+  position: fixed;
+  right: 0;
+  top: 60px;
+  z-index: 500;
+}
+
+/*================================================================================
+  FOOTER
+================================================================================*/
+#footer {
+  width: 100%;
+  height: 57px;
+  background: url("../img/ft_bg.gif") repeat-x center top;
+}
+#footer .copyright {
+  float: left;
+  width: 390px;
+  margin-top: 12px;
+}
+#footer .ft-logo {
+  float: right;
+  width: 85px;
+  height: 31px;
+  text-align: right;
+  margin-top: 12px;
+  display: block;
+}
+#footer .nn-logo {
+  float: right;
+  width: 152px;
+  height: 26px;
+  text-align: right;
+  margin-top: 16px;
+  margin-left: 14px;
+  display: block;
+}
+#footer .hf-logo {
+  float: right;
+  width: 30px;
+  height: 30px;
+  text-align: right;
+  margin-top: 13px;
+  margin-left: 16px;
+  display: block;
+}
+.fixeddd {
+  position: fixed !important;
+  bottom: 0;
+  left: 0;
+}
+#story #footer,
+#spec #footer {
+  background: none !important;
+}
+
+/*================================================================================
+  CONTAINER
+================================================================================*/
+#container {
+  width: 980px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/*================================================================================
+  MODULE STYLE
+================================================================================*/
+.block {
+  position: relative;
+}
+
+.center {
+  text-align: center !important;
+}
+
+.tRight {
+  text-align: right !important;
+}
+
+.clear {
+  clear: both;
+}
+
+.mb0 {
+  margin-bottom: 0px !important;
+}
+
+.mb5 {
+  margin-bottom: 5px !important;
+}
+
+.mb10 {
+  margin-bottom: 10px !important;
+}
+
+.mb15 {
+  margin-bottom: 15px !important;
+}
+
+.mb20 {
+  margin-bottom: 20px !important;
+}
+
+.mb25 {
+  margin-bottom: 25px !important;
+}
+
+.mb30 {
+  margin-bottom: 30px !important;
+}
+
+.mb35 {
+  margin-bottom: 35px !important;
+}
+
+.mb40 {
+  margin-bottom: 40px !important;
+}
+
+.mb45 {
+  margin-bottom: 45px !important;
+}
+
+.mb50 {
+  margin-bottom: 50px !important;
+}
+
+.mb55 {
+  margin-bottom: 55px !important;
+}
+
+.mb60 {
+  margin-bottom: 60px !important;
+}
+
+.mb65 {
+  margin-bottom: 65px !important;
+}
+
+.mb70 {
+  margin-bottom: 70px !important;
+}
+
+.mb75 {
+  margin-bottom: 75px !important;
+}
+
+.mb80 {
+  margin-bottom: 80px !important;
+}
+
+/*================================================================================
+  SMART DEVICE
+================================================================================*/
+.iPhone #htmlContainer,
+.iPhone #mainvisualLayer,
+.iPhone #mainvisualLayer2,
+.iPad #htmlContainer,
+.iPad #mainvisualLayer,
+.iPad #mainvisualLayer2,
+.Android #htmlContainer,
+.Android #mainvisualLayer,
+.Android #mainvisualLayer2 {
+  font-size: 12px;
+  color: #333333;
+  font-family: Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", Heiti, "黑体", sans-serif;
+  min-width: 980px;
+
+  width: 980px !important;
+overflow:hidden;
+  -moz-background-size: auto 100% !important;
+  background-size: auto 100% !important;
+}
+
+
+.iPhone #tweet,
+.iPad #tweet,
+.Android #tweet {
+/*  right: auto !important;
+  left: 915px !important;*/
+}
+
+/* =====================================================================================
+  common class
+
+  update: 13/12/15
+  
+  memo  : 
+        通常フォント：font-size: 14px -> line-height: 24px; 
+        見出し：    font-size: ---; -> line-height: ---; margin: ---; padding: ---;
+        中見出し： font-size: ---; -> line-height: ---;
+        
+        @include size(0,0);
+        @include absolute(0,0,0);
+        @include fixed(0,0,0);
+        @extend .clearfix;
+        background: url("../img/bg_frame.png") repeat-y center top;
+        background: url("../img/top/main_visual.jpg") no-repeat center top;
+
+====================================================================================== */
+#top {
+  /*
+  #board-comments{
+    width:100%;
+    height:100%;
+    position:fixed;
+    @include fixed(0,0,10000);
+    
+    .board-inner{
+      position:relative;
+      width:100%;
+      height:100%;
+    }
+    
+    .cmm-format{
+      @include size(196,196);
+    }
+    
+    .cmm01{
+      position:fixed;
+      left:60px;
+      top:50%;
+      margin-top:-390px;
+      z-index:10000;
+      background: url("../img/top/board_cmm_bg_bl.png") no-repeat center top;
+    }
+  }
+  */
+}
+#top .bg00, #top .bg01, #top .bg02, #top .bg03, #top .bg04, #top .bg05, #top .bg06, #top .bg07 {
+  width: 100%;
+  height: 900px;
+  position: absolute;
+  left: 0;
+  top: 0;
+text-indent:-99999px;
+}
+#top .bg11 {
+  background: url("/data/top11.jpg") no-repeat center top;
+  display: none;
+}
+#top .bg00 {
+  background: url("/data/top00.jpg") no-repeat center top;
+  display: none;
+  }
+#top .bg01 {
+  background: url("/data/top00.jpg") no-repeat center top;
+  display: none;
+  }
+#top .bg02 {
+  background: url("/data/top00_switch.jpg") no-repeat center top;
+  display: none;
+}
+#top .bg03 {
+  background: url("/data/top00_mobile.jpg") no-repeat center top;
+  display: none;
+}
+#top .bg04 {
+  background: url("../img/top/bg_visual_tvanime.jpg") no-repeat center top;
+  display: none;
+}
+#top .bg05 {
+  background: url("/data/BG05.jpg") no-repeat center top;
+  display: none;
+}
+#top .bg06 {
+  background: url("/data/aokana_top_extra1.jpg") no-repeat center top;
+  display: none;
+}
+#top .bg07 {
+  background: url("/data/top07.jpg") no-repeat center top;
+  display: none;
+}
+#top .bg08 {
+  background: url("../img/top/top08.jpg") no-repeat center top;
+  display: none;
+}
+
+#top #mainvisualLayer,
+#top #mainvisualLayer2 {
+  width: 100%;
+  height: 900px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  background: url("../img/top/top00.jpg") no-repeat center top;
+}
+#top #mainvisualLayer2 {
+  z-index: 2;
+}
+#top #main {
+  width: 100%;
+  height: 880px;
+}
+#top #block02 {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+#top #block02 .news-box {
+  width: 580px;
+  height: 3000px;
+  background: url("../img/top/news-box.png") no-repeat 0 0;
+  background-size:580px 3000px;
+  overflow: hidden;
+}
+
+#top #youtubebox {
+  height: 230px;
+  background: url("../img/top/movie-box.png") no-repeat 0 0;
+  background-size: 380px 230px;
+  text-align: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+#top #youtubebox video { 
+  border:solid 1px #555555; 
+  margin: 15px auto 5px; 
+  width:320px; 
+  height:180px; 
+}
+
+#top #block02 .news-box ul {
+  margin: 20px 10px 0;
+}
+#top #block02 .news-box li {
+  display: block;
+  list-style: none;
+  color: #666666;
+  line-height: 18px;
+  font-size: 14px;
+  margin-bottom:15px;
+}
+/* @media (max-width:980px) {
+	#top #block02 .news-box .news-inner li {
+		margin-bottom:5px;
+	}
+} */
+
+#top #block02 .news-box .date {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 5px;
+}
+#top #block02 .news-box .text {
+  text-indent: 28px;
+}
+#top #block02 .pickup-box {
+  width: 489px;
+  height: 99px;
+  float: right;
+}
+#top #block03 {
+  width: 100%;
+  margin-top:-10px !important;
+  margin-bottom: 30px;
+}
+#top #block03 .banner-list {
+  margin-bottom: 1px;
+  height: 81px;
+}
+#top #block03 .banner-list li {
+  float: left;
+  margin: 0 1px;
+}
+#top #block03 .banner-list #bnn-board {
+  cursor: pointer;
+}
+#top #block03 .banner-list img {
+  vertical-align: top;
+}
+#top #board {
+  text-align: center;
+  position: absolute;
+  z-index: 10000;
+  left: 50%;
+  top: 50%;
+  display: none;
+}
+#top .cmm-format {
+  font-family: Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", SimSun, "宋体", STXihei, "华文细黑", Heiti, "黑体", sans-serif;
+  width: 196px;
+  height: 196px;
+  color: #FFF;
+  text-align: center !important;
+  display: none;
+}
+#top .cmm-format .cmm-inner {
+  position: relative;
+  height: 170px;
+  overflow: hidden;
+}
+#top .cmm-format .cmm-inner .cmm-icon {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+#top .cmm-format .cmm-inner .cmm-name {
+  font-size: 10px;
+  padding-bottom: 7px;
+  display: block;
+  width: 160px;
+  line-height: 1.2em !important;
+  margin: 0 auto;
+}
+#top .cmm-format .cmm-inner .cmm-id {
+  font-size: 10px;
+  margin-bottom: 7px;
+}
+#top .cmm-format .cmm-inner .cmm-id a:link, #top .cmm-format .cmm-inner .cmm-id a:visited {
+  color: #FFF;
+  text-decoration: none;
+}
+#top .cmm-format .cmm-inner .cmm-id a:hover, #top .cmm-format .cmm-inner .cmm-id a:active {
+  color: #FFF;
+  text-decoration: underline;
+}
+#top .cmm-format .cmm-inner .cmm-tweet {
+  font-size: 13px;
+  line-height: 1.4;
+  width: 140px;
+  margin-left: 30px;
+  text-align: left !important;
+}
+#top .cmm-format .cmm-inner .cmm-tweet a:link, #top .cmm-format .cmm-inner .cmm-tweet a:visited {
+  color: #FFF;
+  text-decoration: none;
+}
+#top .cmm-format .cmm-inner .cmm-tweet a:hover, #top .cmm-format .cmm-inner .cmm-tweet a:active {
+  color: #FFF;
+  text-decoration: underline;
+}
+#top #cmm01 {
+  position: fixed;
+  left: 4%;
+  top: 50%;
+  margin-top: -390px;
+  z-index: 10000;
+  background: url("../img/top/board_cmm_bg_bl.png") no-repeat center top;
+}
+#top #cmm02 {
+  position: fixed;
+  left: 1%;
+  top: 50%;
+  margin-top: -98px;
+  z-index: 10000;
+  background: url("../img/top/board_cmm_bg_pl.png") no-repeat center top;
+}
+#top #cmm03 {
+  position: fixed;
+  left: 4%;
+  top: 50%;
+  margin-top: 194px;
+  z-index: 10000;
+  background: url("../img/top/board_cmm_bg_bl.png") no-repeat center top;
+}
+#top #cmm04 {
+  position: fixed;
+  right: 4%;
+  top: 50%;
+  margin-top: -390px;
+  z-index: 10000;
+  background: url("../img/top/board_cmm_bg_pr.png") no-repeat center top;
+}
+#top #cmm05 {
+  position: fixed;
+  right: 1%;
+  top: 50%;
+  margin-top: -98px;
+  z-index: 10000;
+  background: url("../img/top/board_cmm_bg_br.png") no-repeat center top;
+}
+#top #cmm06 {
+  position: fixed;
+  right: 4%;
+  top: 50%;
+  margin-top: 194px;
+  z-index: 10000;
+  background: url("../img/top/board_cmm_bg_pr.png") no-repeat center top;
+}
+#top #board-caps {
+  display: block;
+  width: 701px;
+  height: 31px;
+  z-index: 10000;
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -350px;
+  display: none;
+}
+
+/* Tiny Scrollbar */
+#scrollbar1 .viewport {
+  overflow: hidden;
+  position: relative;
+}
+
+#scrollbar1 .overview {
+  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+}
+
+#scrollbar1 .scrollbar {
+  background: transparent url("../img/top/scroller/bg-scrollbar-track-y.png") no-repeat 0 0;
+  position: relative;
+  background-position: 0 0;
+  float: right;
+  width: 15px;
+  margin-top: 20px;
+}
+
+#scrollbar1 .track {
+  background: transparent url("../img/top/scroller/bg-scrollbar-trackend-y.png") no-repeat 0 100%;
+  height: 100%;
+  width: 13px;
+  position: relative;
+  padding: 0 1px;
+}
+
+#scrollbar1 .thumb {
+  background: transparent url("../img/top/scroller/bg-scrollbar-thumb-y.png") no-repeat 50% 100%;
+  height: 20px;
+  width: 25px;
+  cursor: pointer;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: -5px;
+}
+
+#scrollbar1 .thumb .end {
+  background: transparent url("../img/top/scroller/bg-scrollbar-thumb-y.png") no-repeat 50% 0;
+  overflow: hidden;
+  height: 5px;
+  width: 25px;
+}
+
+#scrollbar1 .disable {
+  display: none;
+}
+
+.noSelect {
+  user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+}
+
+/*================================================================================
+  SMART DIVECE
+================================================================================*/
+/* =====================================================================================
+  common class
+
+  update: 13/12/15
+  
+  memo  : 
+        通常フォント：font-size: 14px -> line-height: 24px; 
+        見出し：    font-size: ---; -> line-height: ---; margin: ---; padding: ---;
+        中見出し： font-size: ---; -> line-height: ---;
+        
+        @include size(0,0);
+        @include absolute(0,0,0);
+        @include fixed(0,0,0);
+        @extend .clearfix;
+        background: url("../img/bg_frame.png") repeat-y center top;
+        background: url("../img/top/main_visual.jpg") no-repeat center top;
+
+====================================================================================== */
+#character #htmlContainer {
+  background: url("../img/bg_secondary.jpg") no-repeat center top;
+  padding-top: 95px;
+}
+#character #main {
+  width: 100%;
+  height: 1050px;
+  background-image:url("../img/bg_contents03.png") ,url("../img/bg_contents03.png") ,url("../img/bg_contents03.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center top, center 840px, center 1680px;
+  /* background: url("../img/bg_contents03.png") no-repeat center top; */
+}
+#character #main .title-tabs {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -489px;
+  width: 980px;
+  position: relative;
+}
+#character #main .title-tabs li {
+  float: left;
+}
+#character #main .chara-nav {
+  position: absolute;
+  left: 1px;
+  top: 35px;
+  z-index: 50;
+}
+#character #main .chara-nav li {
+  float: left;
+  margin-right: 3px;
+}
+#character #main .chara-nav .last {
+  margin-left: 5px;
+}
+#character #main .btn-prev {
+  position: absolute;
+  left: 0px;
+  top: 331px;
+  z-index: 50;
+}
+#character #main .btn-next {
+  position: absolute;
+  right: 0;
+  top: 331px;
+  z-index: 50;
+}
+#character #main #asuka {
+  margin-top: -25px;
+}
+#character #main #asuka .name {
+  position: absolute;
+  left: 80px;
+  top: 222px;
+  z-index: 0;
+}
+#character #main #asuka .main {
+  position: absolute;
+  left: 475px;
+  top: 0px;
+  z-index: 0;
+}
+#character #main #asuka .item {
+  position: absolute;
+  left: 916px;
+  top: 115px;
+  z-index: 0;
+}
+#character #main #asuka .sub1 {
+  position: absolute;
+  left: 65px;
+  top: 330px;
+  z-index: 1;
+}
+#character #main #asuka .sub2 {
+  position: absolute;
+  left: 269px;
+  top: 329px;
+  z-index: 0;
+}
+#character #main #asuka .sub1-icon {
+  position: absolute;
+  left: 230px;
+  top: 789px;
+  z-index: 0;
+}
+#character #main #asuka .sub2-icon {
+  position: absolute;
+  left: 437px;
+  top: 789px;
+  z-index: 0;
+}
+#character #main #asuka .prof {
+  position: absolute;
+  left: 97px;
+  top: 1067px;
+  z-index: 0;
+}
+#character #main #asuka .fav {
+  position: absolute;
+  left: 703px;
+  top: 1041px;
+  z-index: 0;
+}
+#character #main #asuka h3 {
+  position: absolute;
+  left: 80px;
+  top: 734px;
+  z-index: 0;
+}
+#character #main #asuka .btn-voice {
+  position: absolute;
+  left: 366px;
+  top: 279px;
+  z-index: 1;
+}
+#character #main #misaki {
+  margin-top: -25px;
+}
+#character #main #misaki .name {
+  position: absolute;
+  left: 80px;
+  top: 222px;
+  z-index: 0;
+}
+#character #main #misaki .main {
+  position: absolute;
+  left: 547px;
+  top: 50px;
+  z-index: 0;
+}
+#character #main #misaki .item {
+  position: absolute;
+  left: 916px;
+  top: 115px;
+  z-index: 0;
+}
+#character #main #misaki .sub1 {
+  position: absolute;
+  left: 125px;
+  top: 360px;
+  z-index: 0;
+}
+#character #main #misaki .sub2 {
+  position: absolute;
+  left: 323px;
+  top: 360px;
+  z-index: 0;
+}
+#character #main #misaki .sub1-icon {
+  position: absolute;
+  left: 236px;
+  top: 780px;
+  z-index: 0;
+}
+#character #main #misaki .sub2-icon {
+  position: absolute;
+  left: 457px;
+  top: 780px;
+  z-index: 0;
+}
+#character #main #misaki .prof {
+  position: absolute;
+  left: 97px;
+  top: 1067px;
+  z-index: 0;
+}
+#character #main #misaki .fav {
+  position: absolute;
+  left: 696px;
+  top: 1041px;
+  z-index: 0;
+}
+#character #main #misaki h3 {
+  position: absolute;
+  left: 80px;
+  top: 734px;
+  z-index: 0;
+}
+#character #main #misaki .btn-voice {
+  position: absolute;
+  left: 366px;
+  top: 279px;
+  z-index: 1;
+}
+#character #main #mashiro {
+  margin-top: -25px;
+}
+#character #main #mashiro .name {
+  position: absolute;
+  left: 80px;
+  top: 222px;
+  z-index: 0;
+}
+#character #main #mashiro .main {
+  position: absolute;
+  left: 501px;
+  top: 83px;
+  z-index: 0;
+}
+#character #main #mashiro .item {
+  position: absolute;
+  left: 916px;
+  top: 115px;
+  z-index: 0;
+}
+#character #main #mashiro .sub1 {
+  position: absolute;
+  left: 107px;
+  top: 360px;
+  z-index: 0;
+}
+#character #main #mashiro .sub2 {
+  position: absolute;
+  left: 313px;
+  top: 360px;
+  z-index: 0;
+}
+#character #main #mashiro .sub1-icon {
+  position: absolute;
+  left: 236px;
+  top: 780px;
+  z-index: 0;
+}
+#character #main #mashiro .sub2-icon {
+  position: absolute;
+  left: 450px;
+  top: 780px;
+  z-index: 0;
+}
+#character #main #mashiro .prof {
+  position: absolute;
+  left: 97px;
+  top: 1067px;
+  z-index: 0;
+}
+#character #main #mashiro .fav {
+  position: absolute;
+  left: 702px;
+  top: 1041px;
+  z-index: 0;
+}
+#character #main #mashiro h3 {
+  position: absolute;
+  left: 80px;
+  top: 734px;
+  z-index: 0;
+}
+#character #main #mashiro .btn-voice {
+  position: absolute;
+  left: 366px;
+  top: 279px;
+  z-index: 1;
+}
+#character #main #rika {
+  margin-top: -25px;
+}
+#character #main #rika .name {
+  position: absolute;
+  left: 80px;
+  top: 222px;
+  z-index: 0;
+}
+#character #main #rika .main {
+  position: absolute;
+  left: 597px;
+  top: 65px;
+  z-index: 0;
+}
+#character #main #rika .item {
+  position: absolute;
+  left: 916px;
+  top: 115px;
+  z-index: 0;
+}
+#character #main #rika .sub1 {
+  position: absolute;
+  left: 154px;
+  top: 360px;
+  z-index: 0;
+}
+#character #main #rika .sub2 {
+  position: absolute;
+  left: 354px;
+  top: 360px;
+  z-index: 0;
+}
+#character #main #rika .sub1-icon {
+  position: absolute;
+  left: 236px;
+  top: 780px;
+  z-index: 0;
+}
+#character #main #rika .sub2-icon {
+  position: absolute;
+  left: 457px;
+  top: 780px;
+  z-index: 0;
+}
+#character #main #rika .prof {
+  position: absolute;
+  left: 97px;
+  top: 1067px;
+  z-index: 0;
+}
+#character #main #rika .fav {
+  position: absolute;
+  left: 701px;
+  top: 1041px;
+  z-index: 0;
+}
+#character #main #rika h3 {
+  position: absolute;
+  left: 80px;
+  top: 734px;
+  z-index: 0;
+}
+#character #main #rika .btn-voice {
+  position: absolute;
+  left: 366px;
+  top: 279px;
+  z-index: 1;
+}
+#character #main #correlation {
+  margin-top: -25px;
+}
+#character #main #correlation h3 {
+  position: absolute;
+  right: 25px;
+  top: 80px;
+}
+#character #main #correlation .cor-box {
+  width: 900px;
+  height: 913px;
+  margin: 0 auto 0 auto;
+  position: absolute;
+  left: 20px;
+  top: 105px;
+  z-index: 0;
+  background: url("../img/character/img_correlation.png") no-repeat center top;
+}
+#character #main #correlation .cor-box a {
+  display: block;
+}
+#character #main #correlation .cor-box .c01 {
+  width: 129px;
+  height: 161px;
+  position: absolute;
+  left: 652px;
+  top: 351px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .c01 a {
+  width: 129px;
+  height: 161px;
+}
+#character #main #correlation .cor-box .c02 {
+  width: 122px;
+  height: 134px;
+  position: absolute;
+  left: 562px;
+  top: 169px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .c02 a {
+  width: 122px;
+  height: 134px;
+}
+#character #main #correlation .cor-box .c03 {
+  width: 124px;
+  height: 134px;
+  position: absolute;
+  left: 390px;
+  top: 169px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .c03 a {
+  width: 124px;
+  height: 134px;
+}
+#character #main #correlation .cor-box .c04 {
+  width: 122px;
+  height: 140px;
+  position: absolute;
+  left: 212px;
+  top: 378px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .c04 a {
+  width: 122px;
+  height: 140px;
+}
+#character #main #correlation .cor-box .s01 {
+  width: 174px;
+  height: 180px;
+  position: absolute;
+  left: 420px;
+  top: 328px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s01 a {
+  width: 174px;
+  height: 180px;
+}
+#character #main #correlation .cor-box .s02 {
+  width: 99px;
+  height: 117px;
+  position: absolute;
+  left: 215px;
+  top: 576px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s02 a {
+  width: 99px;
+  height: 117px;
+}
+#character #main #correlation .cor-box .s03 {
+  width: 99px;
+  height: 119px;
+  position: absolute;
+  left: 352px;
+  top: 733px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s03 a {
+  width: 99px;
+  height: 119px;
+}
+#character #main #correlation .cor-box .s04 {
+  width: 99px;
+  height: 115px;
+  position: absolute;
+  left: 392px;
+  top: 568px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s04 a {
+  width: 99px;
+  height: 115px;
+}
+#character #main #correlation .cor-box .s05 {
+  width: 99px;
+  height: 119px;
+  position: absolute;
+  left: 574px;
+  top: 564px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s05 a {
+  width: 99px;
+  height: 119px;
+}
+#character #main #correlation .cor-box .s06 {
+  width: 99px;
+  height: 115px;
+  position: absolute;
+  left: 725px;
+  top: 188px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s06 a {
+  width: 99px;
+  height: 115px;
+}
+#character #main #correlation .cor-box .s07 {
+  width: 99px;
+  height: 145px;
+  position: absolute;
+  left: 725px;
+  top: 25px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s07 a {
+  width: 99px;
+  height: 145px;
+}
+#character #main #correlation .cor-box .s08 {
+  width: 99px;
+  height: 119px;
+  position: absolute;
+  left: 515px;
+  top: 733px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s08 a {
+  width: 99px;
+  height: 119px;
+}
+#character #main #correlation .cor-box .s09 {
+  width: 99px;
+  height: 119px;
+  position: absolute;
+  left: 666px;
+  top: 733px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s09 a {
+  width: 99px;
+  height: 119px;
+}
+#character #main #correlation .cor-box .s10 {
+  width: 99px;
+  height: 123px;
+  position: absolute;
+  left: 424px;
+  top: 13px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s10 a {
+  width: 99px;
+  height: 123px;
+}
+#character #main #correlation .cor-box .s11 {
+  width: 99px;
+  height: 113px;
+  position: absolute;
+  left: 219px;
+  top: 211px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s11 a {
+  width: 99px;
+  height: 113px;
+}
+#character #main #correlation .cor-box .s12 {
+  width: 99px;
+  height: 119px;
+  position: absolute;
+  left: 202px;
+  top: 733px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s12 a {
+  width: 99px;
+  height: 119px;
+}
+#character #main #correlation .cor-box .s13 {
+  width: 99px;
+  height: 123px;
+  position: absolute;
+  left: 211px;
+  top: 13px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s13 a {
+  width: 99px;
+  height: 123px;
+}
+#character #main #correlation .cor-box .s14 {
+  width: 99px;
+  height: 123px;
+  position: absolute;
+  left: 60px;
+  top: 13px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s14 a {
+  width: 99px;
+  height: 123px;
+}
+#character #main #correlation .cor-box .s15 {
+  width: 99px;
+  height: 118px;
+  position: absolute;
+  left: 60px;
+  top: 328px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s15 a {
+  width: 99px;
+  height: 118px;
+}
+#character #main #correlation .cor-box .s16 {
+  width: 99px;
+  height: 116px;
+  position: absolute;
+  left: 60px;
+  top: 178px;
+  z-index: 0;
+}
+#character #main #correlation .cor-box .s16 a {
+  width: 99px;
+  height: 116px;
+}
+
+#voice-pop,
+#voice-02,
+#voice-03,
+#voice-04,
+#voice-05,
+#voice-06,
+#voice-07,
+#voice-08,
+#voice-09,
+#voice-10,
+#voice-11,
+#voice-12,
+#voice-13,
+#voice-16,
+#voice-14 {
+  display: none;
+}
+#voice-pop .voice-wrap,
+#voice-02 .voice-wrap,
+#voice-03 .voice-wrap,
+#voice-04 .voice-wrap,
+#voice-05 .voice-wrap,
+#voice-06 .voice-wrap,
+#voice-07 .voice-wrap,
+#voice-08 .voice-wrap,
+#voice-09 .voice-wrap,
+#voice-10 .voice-wrap,
+#voice-11 .voice-wrap,
+#voice-12 .voice-wrap,
+#voice-13 .voice-wrap,
+#voice-16 .voice-wrap,
+#voice-14 .voice-wrap {
+  position: relative;
+  width: 558px;
+  height: 169px;
+}
+#voice-pop .voice-wrap .voice-list,
+#voice-02 .voice-wrap .voice-list,
+#voice-03 .voice-wrap .voice-list,
+#voice-04 .voice-wrap .voice-list,
+#voice-05 .voice-wrap .voice-list,
+#voice-06 .voice-wrap .voice-list,
+#voice-07 .voice-wrap .voice-list,
+#voice-08 .voice-wrap .voice-list,
+#voice-09 .voice-wrap .voice-list,
+#voice-10 .voice-wrap .voice-list,
+#voice-11 .voice-wrap .voice-list,
+#voice-12 .voice-wrap .voice-list,
+#voice-13 .voice-wrap .voice-list,
+#voice-16 .voice-wrap .voice-list,
+#voice-14 .voice-wrap .voice-list {
+  position: absolute;
+  left: 348px;
+  top: 108px;
+  z-index: 1;
+}
+#voice-pop .voice-wrap .voice-list li,
+#voice-02 .voice-wrap .voice-list li,
+#voice-03 .voice-wrap .voice-list li,
+#voice-04 .voice-wrap .voice-list li,
+#voice-05 .voice-wrap .voice-list li,
+#voice-06 .voice-wrap .voice-list li,
+#voice-07 .voice-wrap .voice-list li,
+#voice-08 .voice-wrap .voice-list li,
+#voice-09 .voice-wrap .voice-list li,
+#voice-10 .voice-wrap .voice-list li,
+#voice-11 .voice-wrap .voice-list li,
+#voice-12 .voice-wrap .voice-list li,
+#voice-13 .voice-wrap .voice-list li,
+#voice-16 .voice-wrap .voice-list li,
+#voice-14 .voice-wrap .voice-list li {
+  float: left;
+  margin-right: 5px;
+}
+#voice-pop .voice-wrap .voice-list .fadeover,
+#voice-02 .voice-wrap .voice-list .fadeover,
+#voice-03 .voice-wrap .voice-list .fadeover,
+#voice-04 .voice-wrap .voice-list .fadeover,
+#voice-05 .voice-wrap .voice-list .fadeover,
+#voice-06 .voice-wrap .voice-list .fadeover,
+#voice-07 .voice-wrap .voice-list .fadeover,
+#voice-08 .voice-wrap .voice-list .fadeover,
+#voice-09 .voice-wrap .voice-list .fadeover,
+#voice-10 .voice-wrap .voice-list .fadeover,
+#voice-11 .voice-wrap .voice-list .fadeover,
+#voice-12 .voice-wrap .voice-list .fadeover,
+#voice-13 .voice-wrap .voice-list .fadeover,
+#voice-16 .voice-wrap .voice-list .fadeover,
+#voice-14 .voice-wrap .voice-list .fadeover {
+  cursor: pointer;
+}
+#voice-pop .voice-wrap .playing,
+#voice-02 .voice-wrap .playing,
+#voice-03 .voice-wrap .playing,
+#voice-04 .voice-wrap .playing,
+#voice-05 .voice-wrap .playing,
+#voice-06 .voice-wrap .playing,
+#voice-07 .voice-wrap .playing,
+#voice-08 .voice-wrap .playing,
+#voice-09 .voice-wrap .playing,
+#voice-10 .voice-wrap .playing,
+#voice-11 .voice-wrap .playing,
+#voice-12 .voice-wrap .playing,
+#voice-13 .voice-wrap .playing,
+#voice-16 .voice-wrap .playing,
+#voice-14 .voice-wrap .playing {
+  opacity: 0.5 !important;
+  cursor: default !important;
+}
+#voice-pop .voiceSub-wrap,
+#voice-02 .voiceSub-wrap,
+#voice-03 .voiceSub-wrap,
+#voice-04 .voiceSub-wrap,
+#voice-05 .voiceSub-wrap,
+#voice-06 .voiceSub-wrap,
+#voice-07 .voiceSub-wrap,
+#voice-08 .voiceSub-wrap,
+#voice-09 .voiceSub-wrap,
+#voice-10 .voiceSub-wrap,
+#voice-11 .voiceSub-wrap,
+#voice-12 .voiceSub-wrap,
+#voice-13 .voiceSub-wrap,
+#voice-16 .voiceSub-wrap,
+#voice-14 .voiceSub-wrap {
+  position: relative;
+  width: 465px;
+  height: 169px;
+}
+#voice-pop .voiceSub-wrap .voice-list,
+#voice-02 .voiceSub-wrap .voice-list,
+#voice-03 .voiceSub-wrap .voice-list,
+#voice-04 .voiceSub-wrap .voice-list,
+#voice-05 .voiceSub-wrap .voice-list,
+#voice-06 .voiceSub-wrap .voice-list,
+#voice-07 .voiceSub-wrap .voice-list,
+#voice-08 .voiceSub-wrap .voice-list,
+#voice-09 .voiceSub-wrap .voice-list,
+#voice-10 .voiceSub-wrap .voice-list,
+#voice-11 .voiceSub-wrap .voice-list,
+#voice-12 .voiceSub-wrap .voice-list,
+#voice-13 .voiceSub-wrap .voice-list,
+#voice-16 .voiceSub-wrap .voice-list,
+#voice-14 .voiceSub-wrap .voice-list {
+  position: absolute;
+  left: 255px;
+  top: 108px;
+  z-index: 1;
+}
+#voice-pop .voiceSub-wrap .voice-list li,
+#voice-02 .voiceSub-wrap .voice-list li,
+#voice-03 .voiceSub-wrap .voice-list li,
+#voice-04 .voiceSub-wrap .voice-list li,
+#voice-05 .voiceSub-wrap .voice-list li,
+#voice-06 .voiceSub-wrap .voice-list li,
+#voice-07 .voiceSub-wrap .voice-list li,
+#voice-08 .voiceSub-wrap .voice-list li,
+#voice-09 .voiceSub-wrap .voice-list li,
+#voice-10 .voiceSub-wrap .voice-list li,
+#voice-11 .voiceSub-wrap .voice-list li,
+#voice-12 .voiceSub-wrap .voice-list li,
+#voice-13 .voiceSub-wrap .voice-list li,
+#voice-16 .voiceSub-wrap .voice-list li,
+#voice-14 .voiceSub-wrap .voice-list li {
+  float: left;
+  margin-right: 5px;
+}
+#voice-pop .voiceSub-wrap .voice-list .fadeover,
+#voice-02 .voiceSub-wrap .voice-list .fadeover,
+#voice-03 .voiceSub-wrap .voice-list .fadeover,
+#voice-04 .voiceSub-wrap .voice-list .fadeover,
+#voice-05 .voiceSub-wrap .voice-list .fadeover,
+#voice-06 .voiceSub-wrap .voice-list .fadeover,
+#voice-07 .voiceSub-wrap .voice-list .fadeover,
+#voice-08 .voiceSub-wrap .voice-list .fadeover,
+#voice-09 .voiceSub-wrap .voice-list .fadeover,
+#voice-10 .voiceSub-wrap .voice-list .fadeover,
+#voice-11 .voiceSub-wrap .voice-list .fadeover,
+#voice-12 .voiceSub-wrap .voice-list .fadeover,
+#voice-13 .voiceSub-wrap .voice-list .fadeover,
+#voice-16 .voiceSub-wrap .voice-list .fadeover,
+#voice-14 .voiceSub-wrap .voice-list .fadeover {
+  cursor: pointer;
+}
+#voice-pop .voiceSub-wrap .playing,
+#voice-02 .voiceSub-wrap .playing,
+#voice-03 .voiceSub-wrap .playing,
+#voice-04 .voiceSub-wrap .playing,
+#voice-05 .voiceSub-wrap .playing,
+#voice-06 .voiceSub-wrap .playing,
+#voice-07 .voiceSub-wrap .playing,
+#voice-08 .voiceSub-wrap .playing,
+#voice-09 .voiceSub-wrap .playing,
+#voice-10 .voiceSub-wrap .playing,
+#voice-11 .voiceSub-wrap .playing,
+#voice-12 .voiceSub-wrap .playing,
+#voice-13 .voiceSub-wrap .playing,
+#voice-16 .voiceSub-wrap .playing,
+#voice-14 .voiceSub-wrap .playing {
+  opacity: 0.5 !important;
+  cursor: default !important;
+}
+#voice-pop .voice-asuka,
+#voice-02 .voice-asuka,
+#voice-03 .voice-asuka,
+#voice-04 .voice-asuka,
+#voice-05 .voice-asuka,
+#voice-06 .voice-asuka,
+#voice-07 .voice-asuka,
+#voice-08 .voice-asuka,
+#voice-09 .voice-asuka,
+#voice-10 .voice-asuka,
+#voice-11 .voice-asuka,
+#voice-12 .voice-asuka,
+#voice-13 .voice-asuka,
+#voice-16 .voice-asuka,
+#voice-14 .voice-asuka {
+  background: url("../img/character/bg_voice_asuka.png") no-repeat 0 0;
+}
+#voice-pop .voice-misaki,
+#voice-02 .voice-misaki,
+#voice-03 .voice-misaki,
+#voice-04 .voice-misaki,
+#voice-05 .voice-misaki,
+#voice-06 .voice-misaki,
+#voice-07 .voice-misaki,
+#voice-08 .voice-misaki,
+#voice-09 .voice-misaki,
+#voice-10 .voice-misaki,
+#voice-11 .voice-misaki,
+#voice-12 .voice-misaki,
+#voice-13 .voice-misaki,
+#voice-16 .voice-misaki,
+#voice-14 .voice-misaki {
+  background: url("../img/character/bg_voice_misaki.png") no-repeat 0 0;
+}
+#voice-pop .voice-mashiro,
+#voice-02 .voice-mashiro,
+#voice-03 .voice-mashiro,
+#voice-04 .voice-mashiro,
+#voice-05 .voice-mashiro,
+#voice-06 .voice-mashiro,
+#voice-07 .voice-mashiro,
+#voice-08 .voice-mashiro,
+#voice-09 .voice-mashiro,
+#voice-10 .voice-mashiro,
+#voice-11 .voice-mashiro,
+#voice-12 .voice-mashiro,
+#voice-13 .voice-mashiro,
+#voice-16 .voice-mashiro,
+#voice-14 .voice-mashiro {
+  background: url("../img/character/bg_voice_mashiro.png") no-repeat 0 0;
+}
+#voice-pop .voice-rika,
+#voice-02 .voice-rika,
+#voice-03 .voice-rika,
+#voice-04 .voice-rika,
+#voice-05 .voice-rika,
+#voice-06 .voice-rika,
+#voice-07 .voice-rika,
+#voice-08 .voice-rika,
+#voice-09 .voice-rika,
+#voice-10 .voice-rika,
+#voice-11 .voice-rika,
+#voice-12 .voice-rika,
+#voice-13 .voice-rika,
+#voice-16 .voice-rika,
+#voice-14 .voice-rika {
+  background: url("../img/character/bg_voice_rika.png") no-repeat 0 0;
+}
+#voice-pop .voice-02,
+#voice-02 .voice-02,
+#voice-03 .voice-02,
+#voice-04 .voice-02,
+#voice-05 .voice-02,
+#voice-06 .voice-02,
+#voice-07 .voice-02,
+#voice-08 .voice-02,
+#voice-09 .voice-02,
+#voice-10 .voice-02,
+#voice-11 .voice-02,
+#voice-12 .voice-02,
+#voice-13 .voice-02,
+#voice-16 .voice-02,
+#voice-14 .voice-02 {
+  background: url("../img/character/bg_voice_02.png") no-repeat 0 0;
+  width: 525px !important;
+}
+#voice-pop .voice-02 .voice-list,
+#voice-02 .voice-02 .voice-list,
+#voice-03 .voice-02 .voice-list,
+#voice-04 .voice-02 .voice-list,
+#voice-05 .voice-02 .voice-list,
+#voice-06 .voice-02 .voice-list,
+#voice-07 .voice-02 .voice-list,
+#voice-08 .voice-02 .voice-list,
+#voice-09 .voice-02 .voice-list,
+#voice-10 .voice-02 .voice-list,
+#voice-11 .voice-02 .voice-list,
+#voice-12 .voice-02 .voice-list,
+#voice-13 .voice-02 .voice-list,
+#voice-16 .voice-02 .voice-list,
+#voice-14 .voice-02 .voice-list {
+  left: 315px !important;
+}
+#voice-pop .voice-03,
+#voice-02 .voice-03,
+#voice-03 .voice-03,
+#voice-04 .voice-03,
+#voice-05 .voice-03,
+#voice-06 .voice-03,
+#voice-07 .voice-03,
+#voice-08 .voice-03,
+#voice-09 .voice-03,
+#voice-10 .voice-03,
+#voice-11 .voice-03,
+#voice-12 .voice-03,
+#voice-13 .voice-03,
+#voice-16 .voice-03,
+#voice-14 .voice-03 {
+  background: url("../img/character/bg_voice_03.png") no-repeat 0 0;
+}
+#voice-pop .voice-04,
+#voice-02 .voice-04,
+#voice-03 .voice-04,
+#voice-04 .voice-04,
+#voice-05 .voice-04,
+#voice-06 .voice-04,
+#voice-07 .voice-04,
+#voice-08 .voice-04,
+#voice-09 .voice-04,
+#voice-10 .voice-04,
+#voice-11 .voice-04,
+#voice-12 .voice-04,
+#voice-13 .voice-04,
+#voice-16 .voice-04,
+#voice-14 .voice-04 {
+  background: url("../img/character/bg_voice_aoi.png") no-repeat 0 0;
+}
+#voice-pop .voice-05,
+#voice-02 .voice-05,
+#voice-03 .voice-05,
+#voice-04 .voice-05,
+#voice-05 .voice-05,
+#voice-06 .voice-05,
+#voice-07 .voice-05,
+#voice-08 .voice-05,
+#voice-09 .voice-05,
+#voice-10 .voice-05,
+#voice-11 .voice-05,
+#voice-12 .voice-05,
+#voice-13 .voice-05,
+#voice-16 .voice-05,
+#voice-14 .voice-05 {
+  background: url("../img/character/bg_voice_05.png") no-repeat 0 0;
+}
+#voice-pop .voice-06,
+#voice-02 .voice-06,
+#voice-03 .voice-06,
+#voice-04 .voice-06,
+#voice-05 .voice-06,
+#voice-06 .voice-06,
+#voice-07 .voice-06,
+#voice-08 .voice-06,
+#voice-09 .voice-06,
+#voice-10 .voice-06,
+#voice-11 .voice-06,
+#voice-12 .voice-06,
+#voice-13 .voice-06,
+#voice-16 .voice-06,
+#voice-14 .voice-06 {
+  background: url("../img/character/bg_voice_06.png") no-repeat 0 0;
+}
+#voice-pop .voice-07,
+#voice-02 .voice-07,
+#voice-03 .voice-07,
+#voice-04 .voice-07,
+#voice-05 .voice-07,
+#voice-06 .voice-07,
+#voice-07 .voice-07,
+#voice-08 .voice-07,
+#voice-09 .voice-07,
+#voice-10 .voice-07,
+#voice-11 .voice-07,
+#voice-12 .voice-07,
+#voice-13 .voice-07,
+#voice-16 .voice-07,
+#voice-14 .voice-07 {
+  background: url("../img/character/bg_voice_07.png") no-repeat 0 0;
+}
+#voice-pop .voice-08,
+#voice-02 .voice-08,
+#voice-03 .voice-08,
+#voice-04 .voice-08,
+#voice-05 .voice-08,
+#voice-06 .voice-08,
+#voice-07 .voice-08,
+#voice-08 .voice-08,
+#voice-09 .voice-08,
+#voice-10 .voice-08,
+#voice-11 .voice-08,
+#voice-12 .voice-08,
+#voice-13 .voice-08,
+#voice-16 .voice-08,
+#voice-14 .voice-08 {
+  background: url("../img/character/bg_voice_08.png") no-repeat 0 0;
+}
+#voice-pop .voice-09,
+#voice-02 .voice-09,
+#voice-03 .voice-09,
+#voice-04 .voice-09,
+#voice-05 .voice-09,
+#voice-06 .voice-09,
+#voice-07 .voice-09,
+#voice-08 .voice-09,
+#voice-09 .voice-09,
+#voice-10 .voice-09,
+#voice-11 .voice-09,
+#voice-12 .voice-09,
+#voice-13 .voice-09,
+#voice-16 .voice-09,
+#voice-14 .voice-09 {
+  background: url("../img/character/bg_voice_09.png") no-repeat 0 0;
+  width: 525px !important;
+}
+#voice-pop .voice-09 .voice-list,
+#voice-02 .voice-09 .voice-list,
+#voice-03 .voice-09 .voice-list,
+#voice-04 .voice-09 .voice-list,
+#voice-05 .voice-09 .voice-list,
+#voice-06 .voice-09 .voice-list,
+#voice-07 .voice-09 .voice-list,
+#voice-08 .voice-09 .voice-list,
+#voice-09 .voice-09 .voice-list,
+#voice-10 .voice-09 .voice-list,
+#voice-11 .voice-09 .voice-list,
+#voice-12 .voice-09 .voice-list,
+#voice-13 .voice-09 .voice-list,
+#voice-16 .voice-09 .voice-list,
+#voice-14 .voice-09 .voice-list {
+  left: 315px !important;
+}
+#voice-pop .voice-10,
+#voice-02 .voice-10,
+#voice-03 .voice-10,
+#voice-04 .voice-10,
+#voice-05 .voice-10,
+#voice-06 .voice-10,
+#voice-07 .voice-10,
+#voice-08 .voice-10,
+#voice-09 .voice-10,
+#voice-10 .voice-10,
+#voice-11 .voice-10,
+#voice-12 .voice-10,
+#voice-13 .voice-10,
+#voice-16 .voice-10,
+#voice-14 .voice-10 {
+  background: url("../img/character/bg_voice_10.png") no-repeat 0 0;
+}
+#voice-pop .voice-11,
+#voice-02 .voice-11,
+#voice-03 .voice-11,
+#voice-04 .voice-11,
+#voice-05 .voice-11,
+#voice-06 .voice-11,
+#voice-07 .voice-11,
+#voice-08 .voice-11,
+#voice-09 .voice-11,
+#voice-10 .voice-11,
+#voice-11 .voice-11,
+#voice-12 .voice-11,
+#voice-13 .voice-11,
+#voice-16 .voice-11,
+#voice-14 .voice-11 {
+  background: url("../img/character/bg_voice_11.png") no-repeat 0 0;
+  width: 505px !important;
+}
+#voice-pop .voice-11 .voice-list,
+#voice-02 .voice-11 .voice-list,
+#voice-03 .voice-11 .voice-list,
+#voice-04 .voice-11 .voice-list,
+#voice-05 .voice-11 .voice-list,
+#voice-06 .voice-11 .voice-list,
+#voice-07 .voice-11 .voice-list,
+#voice-08 .voice-11 .voice-list,
+#voice-09 .voice-11 .voice-list,
+#voice-10 .voice-11 .voice-list,
+#voice-11 .voice-11 .voice-list,
+#voice-12 .voice-11 .voice-list,
+#voice-13 .voice-11 .voice-list,
+#voice-16 .voice-11 .voice-list,
+#voice-14 .voice-11 .voice-list {
+  left: 295px !important;
+}
+#voice-pop .voice-12,
+#voice-02 .voice-12,
+#voice-03 .voice-12,
+#voice-04 .voice-12,
+#voice-05 .voice-12,
+#voice-06 .voice-12,
+#voice-07 .voice-12,
+#voice-08 .voice-12,
+#voice-09 .voice-12,
+#voice-10 .voice-12,
+#voice-11 .voice-12,
+#voice-12 .voice-12,
+#voice-13 .voice-12,
+#voice-16 .voice-12,
+#voice-14 .voice-12 {
+  background: url("../img/character/bg_voice_12.png") no-repeat 0 0;
+  width: 715px !important;
+}
+#voice-pop .voice-12 .voice-list,
+#voice-02 .voice-12 .voice-list,
+#voice-03 .voice-12 .voice-list,
+#voice-04 .voice-12 .voice-list,
+#voice-05 .voice-12 .voice-list,
+#voice-06 .voice-12 .voice-list,
+#voice-07 .voice-12 .voice-list,
+#voice-08 .voice-12 .voice-list,
+#voice-09 .voice-12 .voice-list,
+#voice-10 .voice-12 .voice-list,
+#voice-11 .voice-12 .voice-list,
+#voice-12 .voice-12 .voice-list,
+#voice-13 .voice-12 .voice-list,
+#voice-16 .voice-12 .voice-list,
+#voice-14 .voice-12 .voice-list {
+  left: 505px !important;
+}
+#voice-pop .voice-13,
+#voice-02 .voice-13,
+#voice-03 .voice-13,
+#voice-04 .voice-13,
+#voice-05 .voice-13,
+#voice-06 .voice-13,
+#voice-07 .voice-13,
+#voice-08 .voice-13,
+#voice-09 .voice-13,
+#voice-10 .voice-13,
+#voice-11 .voice-13,
+#voice-12 .voice-13,
+#voice-13 .voice-13,
+#voice-16 .voice-13,
+#voice-14 .voice-13 {
+  background: url("../img/character/bg_voice_13.png") no-repeat 0 0;
+  width: 525px !important;
+}
+#voice-pop .voice-13 .voice-list,
+#voice-02 .voice-13 .voice-list,
+#voice-03 .voice-13 .voice-list,
+#voice-04 .voice-13 .voice-list,
+#voice-05 .voice-13 .voice-list,
+#voice-06 .voice-13 .voice-list,
+#voice-07 .voice-13 .voice-list,
+#voice-08 .voice-13 .voice-list,
+#voice-09 .voice-13 .voice-list,
+#voice-10 .voice-13 .voice-list,
+#voice-11 .voice-13 .voice-list,
+#voice-12 .voice-13 .voice-list,
+#voice-13 .voice-13 .voice-list,
+#voice-16 .voice-13 .voice-list,
+#voice-14 .voice-13 .voice-list {
+  left: 315px !important;
+}
+#voice-pop .voice-14,
+#voice-02 .voice-14,
+#voice-03 .voice-14,
+#voice-04 .voice-14,
+#voice-05 .voice-14,
+#voice-06 .voice-14,
+#voice-07 .voice-14,
+#voice-08 .voice-14,
+#voice-09 .voice-14,
+#voice-10 .voice-14,
+#voice-11 .voice-14,
+#voice-12 .voice-14,
+#voice-13 .voice-14,
+#voice-16 .voice-14,
+#voice-14 .voice-14 {
+  background: url("../img/character/bg_voice_14.png") no-repeat 0 0;
+  width: 525px !important;
+}
+#voice-pop .voice-14 .voice-list,
+#voice-02 .voice-14 .voice-list,
+#voice-03 .voice-14 .voice-list,
+#voice-04 .voice-14 .voice-list,
+#voice-05 .voice-14 .voice-list,
+#voice-06 .voice-14 .voice-list,
+#voice-07 .voice-14 .voice-list,
+#voice-08 .voice-14 .voice-list,
+#voice-09 .voice-14 .voice-list,
+#voice-10 .voice-14 .voice-list,
+#voice-11 .voice-14 .voice-list,
+#voice-12 .voice-14 .voice-list,
+#voice-13 .voice-14 .voice-list,
+#voice-16 .voice-14 .voice-list,
+#voice-14 .voice-14 .voice-list {
+  left: 315px !important;
+}
+#voice-pop .voice-16,
+#voice-02 .voice-16,
+#voice-03 .voice-16,
+#voice-04 .voice-16,
+#voice-05 .voice-16,
+#voice-06 .voice-16,
+#voice-07 .voice-16,
+#voice-08 .voice-16,
+#voice-09 .voice-16,
+#voice-10 .voice-16,
+#voice-11 .voice-16,
+#voice-12 .voice-16,
+#voice-13 .voice-16,
+#voice-16 .voice-16,
+#voice-14 .voice-16 {
+  background: url("../img/character/bg_voice_16.png") no-repeat 0 0;
+}
+
+/*================================================================================
+  SUB CHARACTER
+================================================================================*/
+#character .sub-main {
+  height: 900px !important;
+}
+#character #sub-chara .chara-nav-sub {
+  position: absolute;
+  left: 1px;
+  top: 10px;
+  z-index: 50;
+}
+#character #sub-chara .chara-nav-sub li {
+  float: left;
+  margin-right: 3px;
+  cursor: pointer;
+}
+#character #sub-chara .chara-nav-sub .last {
+  margin-left: 5px;
+}
+#character #sub-chara .item {
+  position: absolute;
+  left: 916px;
+  top: 90px;
+  z-index: 0;
+}
+#character #sub-chara #subchara-block {
+  width: 765px;
+  height: 630px;
+  overflow: hidden;
+  position: absolute;
+  left: 90px;
+  top: 85px;
+  z-index: 0;
+}
+#character #sub-chara ul {
+  width: 4200px;
+}
+#character #sub-chara li {
+  float: left;
+}
+#character #sub-chara .btn-prev-sub {
+  position: absolute;
+  left: 0px;
+  top: 331px;
+  z-index: 50;
+  display: none;
+  cursor: pointer;
+}
+#character #sub-chara .btn-next-sub {
+  position: absolute;
+  right: 0;
+  top: 331px;
+  z-index: 50;
+  cursor: pointer;
+}
+#character #subchara-prof {
+  position: absolute;
+  left: 45px;
+  top: 725px;
+  z-index: 0;
+}
+#character #subchara-prof .subchara-prof-box {
+  position: relative;
+  height: 100px;
+  width: 850px;
+  overflow: hidden;
+}
+#character #subchara-prof li {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+  width: 850px;
+  height: 90px;
+  margin-left: 850px;
+  text-align: center;
+}
+
+/*================================================================================
+  SMART DIVECE
+================================================================================*/
+/* =====================================================================================
+  common class
+
+  update: 13/12/15
+  
+  memo  : 
+        通常フォント：font-size: 14px -> line-height: 24px; 
+        見出し：    font-size: ---; -> line-height: ---; margin: ---; padding: ---;
+        中見出し： font-size: ---; -> line-height: ---;
+        
+        @include size(0,0);
+        @include absolute(0,0,0);
+        @include fixed(0,0,0);
+        @extend .clearfix;
+        background: url("../img/bg_frame.png") repeat-y center top;
+        background: url("../img/top/main_visual.jpg") no-repeat center top;
+
+====================================================================================== */
+#story #htmlContainer {
+  background: url("../img/story/bg_story.jpg") no-repeat center top;
+/*  height: 980px;*/
+  overflow: hidden;
+}
+#story #main {
+  width: 100%;
+  height: 980px;
+  margin-top: 95px;
+  margin-bottom: 50px;
+}
+#story #main h2 {
+  margin-bottom: 25px;
+}
+
+/*================================================================================
+  SMART DIVECE
+================================================================================*/
+/* =====================================================================================
+  common class
+
+  update: 13/12/15
+  
+  memo  : 
+        通常フォント：font-size: 14px -> line-height: 24px; 
+        見出し：    font-size: ---; -> line-height: ---; margin: ---; padding: ---;
+        中見出し： font-size: ---; -> line-height: ---;
+        
+        @include size(0,0);
+        @include absolute(0,0,0);
+        @include fixed(0,0,0);
+        @extend .clearfix;
+        background: url("../img/bg_frame.png") repeat-y center top;
+        background: url("../img/top/main_visual.jpg") no-repeat center top;
+
+====================================================================================== */
+#spec #htmlContainer {
+  background: url("../img/spec/bg_spec02.jpg") no-repeat center top;
+  padding-top: 120px;
+}
+#spec #main {
+  width: 100%;
+  height: 1620px;
+  text-align: center;
+}
+#spec #main h2 {
+  margin-bottom: 25px;
+}
+#spec #main .img01 {
+  margin-bottom: 220px;
+}
+
+/*================================================================================
+  SMART DIVECE
+================================================================================*/
+/* =====================================================================================
+  common class
+
+  update: 13/12/15
+  
+  memo  : 
+        通常フォント：font-size: 14px -> line-height: 24px; 
+        見出し：    font-size: ---; -> line-height: ---; margin: ---; padding: ---;
+        中見出し： font-size: ---; -> line-height: ---;
+        
+        @include size(0,0);
+        @include absolute(0,0,0);
+        @include fixed(0,0,0);
+        @extend .clearfix;
+        background: url("../img/bg_frame.png") repeat-y center top;
+        background: url("../img/top/main_visual.jpg") no-repeat center top;
+
+====================================================================================== */
+#world #htmlContainer {
+  background: url("../img/bg_secondary.jpg") no-repeat center top;
+  padding-top: 95px;
+}
+#world #main {
+  width: 100%;
+  height: 1300px;
+  background-image:url("../img/bg_contents02.png") ,url("../img/bg_contents02.png") ,url("../img/bg_contents02.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center top, center 840px, center 1680px;
+  /*background: url("../img/bg_contents02.png") no-repeat center top;*/
+}
+#world #main h2 {
+  margin-bottom: 20px;
+}
+#world #main h3 {
+  margin-bottom: 25px;
+}
+#world #main .world-box {
+  width: 900px;
+  height: 1097px;
+  position: relative;
+}
+#world #main .world-box .box {
+  position: relative;
+}
+#world #main .world-box .box .def {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+}
+#world #main .world-box .box .over {
+  z-index: 10;
+  display: none;
+}
+#world #main .world-box .w01 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+}
+#world #main .world-box .w01 .over {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+}
+#world #main .world-box .w02 {
+  position: absolute;
+  left: 0px;
+  top: 510px;
+  z-index: 0;
+}
+#world #main .world-box .w02 .over {
+  position: absolute;
+  left: 452px;
+  top: 0px;
+  z-index: 10;
+}
+#world #main .world-box .w03 {
+  position: absolute;
+  left: 452px;
+  top: 510px;
+  z-index: 0;
+}
+#world #main .world-box .w03 .over {
+  position: absolute;
+  left: -452px;
+  top: 0px;
+  z-index: 10;
+}
+#world #main .world-box .w04 {
+  position: absolute;
+  left: 0px;
+  top: 763px;
+  z-index: 0;
+}
+#world #main .world-box .w04 .over {
+  position: absolute;
+  left: 302px;
+  top: 0px;
+  z-index: 10;
+}
+#world #main .world-box .w05 {
+  position: absolute;
+  left: 302px;
+  top: 763px;
+  z-index: 0;
+}
+#world #main .world-box .w05 .over {
+  position: absolute;
+  left: 0px;
+  top: 169px;
+  z-index: 10;
+}
+#world #main .world-box .w06 {
+  position: absolute;
+  left: 604px;
+  top: 763px;
+  z-index: 0;
+}
+#world #main .world-box .w06 .over {
+  position: absolute;
+  left: -302px;
+  top: 169px;
+  z-index: 10;
+}
+#world #main .world-box .w07 {
+  position: absolute;
+  left: 0px;
+  top: 932px;
+  z-index: 0;
+}
+#world #main .world-box .w07 .over {
+  position: absolute;
+  left: 0px;
+  top: -169px;
+  z-index: 10;
+}
+#world #main .world-box .w08 {
+  position: absolute;
+  left: 302px;
+  top: 932px;
+  z-index: 0;
+}
+#world #main .world-box .w08 .over {
+  position: absolute;
+  left: 0px;
+  top: -169px;
+  z-index: 10;
+}
+#world #main .world-box .w09 {
+  position: absolute;
+  left: 604px;
+  top: 932px;
+  z-index: 0;
+}
+#world #main .world-box .w09 .over {
+  position: absolute;
+  left: -604px;
+  top: -932px;
+  z-index: 10;
+}
+
+/*================================================================================
+  SMART DIVECE
+================================================================================*/
+/* =====================================================================================
+  common class
+
+  update: 13/12/15
+  
+  memo  : 
+        通常フォント：font-size: 14px -> line-height: 24px; 
+        見出し：    font-size: ---; -> line-height: ---; margin: ---; padding: ---;
+        中見出し： font-size: ---; -> line-height: ---;
+        
+        @include size(0,0);
+        @include absolute(0,0,0);
+        @include fixed(0,0,0);
+        @extend .clearfix;
+        background: url("../img/bg_frame.png") repeat-y center top;
+        background: url("../img/top/main_visual.jpg") no-repeat center top;
+
+====================================================================================== */
+#fc {
+  color: #727171;
+  line-height: 1.6;
+}
+#fc #htmlContainer {
+  background: url("../img/bg_secondary.jpg") no-repeat center top;
+  padding-top: 95px;
+}
+#fc #main {
+  width: 100%;
+  background-image:url("../img/bg_contents02.png") ,url("../img/bg_contents02.png") ,url("../img/bg_contents02.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center top, center 840px, center 1680px;
+  /*background: url("../img/bg_contents02.png") no-repeat center top;*/
+}
+#fc #main h2 {
+  margin-bottom: 20px;
+}
+#fc #main h3 {
+  margin-bottom: 15px;
+}
+#fc #main .lead {
+  margin-bottom: 20px;
+}
+#fc #main .main-img {
+  margin-bottom: 50px;
+}
+#fc #main .fc-box {
+  width: 900px;
+  position: relative;
+  margin-bottom: 50px;
+}
+#fc #main .fc-box .box-l {
+  width: 330px;
+  float: left;
+}
+#fc #main .fc-box .box-l h5 {
+  margin-bottom: 0px;
+}
+#fc #main .fc-box .box-r {
+  width: 530px;
+  float: right;
+}
+#fc #main .fc-box h4 {
+  margin-bottom: 15px;
+}
+#fc #main .keyword-box {
+  width: 900px;
+  position: relative;
+  margin-bottom: 50px;
+}
+#fc #main .keyword-box .box-l {
+  width: 283px;
+  float: left;
+  margin-right: 25px;
+}
+#fc #main .keyword-box .box-c {
+  width: 283px;
+  float: left;
+  margin-right: 25px;
+}
+#fc #main .keyword-box .box-r {
+  width: 283px;
+  float: left;
+}
+#fc #main .keyword-box li {
+  border-bottom: #6CB5E8 solid 1px;
+}
+#fc #main .keyword-box li .btn {
+  cursor: pointer;
+  width: 283px;
+  height: 50px;
+  position: relative;
+}
+#fc #main .keyword-box li .btn .img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
+}
+#fc #main .keyword-box li .btn .def {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+#fc #main .keyword-box li .btn .cr {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 2;
+}
+#fc #main .keyword-box li .btn .none {
+  display: none;
+}
+#fc #main .keyword-box li .detail {
+  display: none;
+  margin-bottom: 15px;
+}
+
+/*================================================================================
+  SMART DIVECE
+================================================================================*/
+/* =====================================================================================
+  common class
+
+  update: 13/12/15
+  
+  memo  : 
+        通常フォント：font-size: 14px -> line-height: 24px; 
+        見出し：    font-size: ---; -> line-height: ---; margin: ---; padding: ---;
+        中見出し： font-size: ---; -> line-height: ---;
+        
+        @include size(0,0);
+        @include absolute(0,0,0);
+        @include fixed(0,0,0);
+        @extend .clearfix;
+        background: url("../img/bg_frame.png") repeat-y center top;
+        background: url("../img/top/main_visual.jpg") no-repeat center top;
+
+====================================================================================== */
+#gallery {
+  color: #727171;
+  line-height: 1.6;
+}
+#gallery #htmlContainer {
+  background: url("../img/bg_secondary.jpg") no-repeat center top;
+  padding-top: 95px;
+}
+#gallery #main {
+  width: 100%;
+  background-image:url("../img/bg_contents02.png") ,url("../img/bg_contents02.png") ,url("../img/bg_contents02.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center top, center 840px, center 1680px;
+  /*background: url("../img/bg_contents02.png") no-repeat center top;*/
+}
+#gallery #main h2 {
+  margin-bottom: 20px;
+}
+#gallery #main .gallery-list {
+  margin-bottom: 50px;
+}
+#gallery #main .gallery-list li {
+  width: 298px;
+  float: left;
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+#gallery #main .gallery-list li img {
+  vertical-align: top;
+}
+#gallery #main .gallery-list li .name {
+  height: 21px;
+  font-size: 10px;
+  line-height: 21px;
+  color: #999;
+  background: url("../img/gallery/icon_thumb.gif") no-repeat 0 0;
+}
+#gallery #main .gallery-list li .name span {
+  display: block;
+  margin-left: 15px;
+}
+#gallery #main .gallery-list .last {
+  margin-right: 0;
+}
+
+/*================================================================================
+  SMART DIVECE
+================================================================================*/
+/* =====================================================================================
+  common class
+
+  update: 13/12/15
+  
+  memo  : 
+        通常フォント：font-size: 14px -> line-height: 24px; 
+        見出し：    font-size: ---; -> line-height: ---; margin: ---; padding: ---;
+        中見出し： font-size: ---; -> line-height: ---;
+        
+        @include size(0,0);
+        @include absolute(0,0,0);
+        @include fixed(0,0,0);
+        @extend .clearfix;
+        background: url("../img/bg_frame.png") repeat-y center top;
+        background: url("../img/top/main_visual.jpg") no-repeat center top;
+
+====================================================================================== */
+#special {
+  color: #727171;
+  line-height: 1.6;
+}
+#special #htmlContainer {
+  background: url("../img/bg_secondary.jpg") no-repeat center top;
+background-color:#FFFFFF;
+  padding-top: 95px;
+}
+#special #main {
+  width: 100%;
+  overflow:hidden;
+  background-image:url("../img/bg_contents02.png") ,url("../img/bg_contents02.png") ,url("../img/bg_contents02.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center top, center 840px, center 1680px;
+/*  background: url("../img/bg_contents02.png") no-repeat center top;*/
+}
+#special #main h2 {
+  margin-bottom: 20px;
+}
+#special #main .special-list {
+  margin-bottom: 50px;
+}
+#special #main .special-list li {
+  width: 298px;
+  float: left;
+  margin-right: 3px;
+  margin-bottom: 8px;
+}
+#special #main .special-list li img {
+  vertical-align: top;
+}
+#special #main .special-list li .name {
+  height: 21px;
+  font-size: 10px;
+  line-height: 21px;
+  color: #999;
+  background: url("../img/special/icon_thumb.gif") no-repeat 0 0;
+}
+#special #main .special-list li .name span {
+  display: block;
+  margin-left: 15px;
+}
+#special #main .special-list .last {
+  margin-right: 0;
+}
+
+/*================================================================================
+  SMART DIVECE
+================================================================================*/
+/* =====================================================================================
+  common class
+
+  update: 13/12/15
+  
+  memo  : 
+        通常フォント：font-size: 14px -> line-height: 24px; 
+        見出し：    font-size: ---; -> line-height: ---; margin: ---; padding: ---;
+        中見出し： font-size: ---; -> line-height: ---;
+        
+        @include size(0,0);
+        @include absolute(0,0,0);
+        @include fixed(0,0,0);
+        @extend .clearfix;
+        background: url("../img/bg_frame.png") repeat-y center top;
+        background: url("../img/top/main_visual.jpg") no-repeat center top;
+
+====================================================================================== */
+#campaign {
+  color: #727171;
+  line-height: 1.6;
+}
+#campaign .fancybox-iframe {
+  margin: 0 auto !important;
+}
+#campaign #htmlContainer {
+  background: url("../img/bg_secondary.jpg") no-repeat center top;
+  padding-top: 95px;
+}
+#campaign #main {
+  width: 100%;
+  background-image:url("../img/bg_contents02.png") ,url("../img/bg_contents02.png") ,url("../img/bg_contents02.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center top, center 840px, center 1680px;
+  /*background: url("../img/bg_contents02.png") no-repeat center top;*/
+}
+#campaign #main .bg-wrap {
+  width: 978px;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #FFF;
+}
+#campaign #main h2 {
+  margin-bottom: 20px;
+}
+#campaign #main .campaign-list {
+  margin-bottom: 30px;
+}
+#campaign #main .campaign-list li {
+  width: 298px;
+  float: left;
+  margin-right: 3px;
+  margin-bottom: 12px;
+}
+#campaign #main .campaign-list li img {
+  vertical-align: top;
+}
+#campaign #main .campaign-list li .name {
+  height: 21px;
+  font-size: 11px;
+  line-height: 21px;
+  margin-bottom: 1px;
+  color: #999;
+  background: url("../img/campaign/img_penname.gif") no-repeat 0 0;
+}
+#campaign #main .campaign-list li .name span {
+  display: block;
+  margin-left: 80px;
+}
+#campaign #main .campaign-list li .img {
+  width: 298px;
+  height: 250px;
+  position: relative;
+  background: url("../img/campaign/bg_thumb.gif") no-repeat 0 0;
+}
+#campaign #main .campaign-list li .img span {
+  display: block;
+}
+#campaign #main .campaign-list li .img .thumb {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+#campaign #main .campaign-list li .img .cover {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+}
+#campaign #main .campaign-list .last {
+  margin-right: 0;
+}
+#campaign #main .bnn-form {
+  text-align: center;
+  margin-bottom: 50px;
+}
+#campaign #main .bnn-form p {
+  display: block;
+  width: 802px;
+  margin: 0 auto;
+}
+#campaign #main .bnn-form p img {
+  vertical-align: top;
+}
+#campaign .fancybox-iframe {
+  min-width: 800px !important;
+}
+
+#campaign-pop #pop-wrap {
+  text-align: center;
+  background-color: #FFF;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #666;
+  width: 100%;
+}
+#campaign-pop #pop-illust {
+  text-align: center;
+}
+#campaign-pop .pop-inner {
+  margin: 0 auto;
+}
+#campaign-pop .pop-inner .pop-close {
+  width: 80px;
+  margin: 0 auto;
+}
+#campaign-pop .pop-inner .pop-box {
+  text-align: left;
+  background: url("../img/campaign/bar_dot.gif") 0 100% repeat-x;
+  padding-bottom: 10px;
+  margin: 0 auto 10px auto;
+  width: 800px;
+}
+#campaign-pop .pop-inner .pop-box .pop-title {
+  width: 100px;
+  float: left;
+}
+#campaign-pop .pop-inner .pop-box .pop-detail {
+  float: right;
+  width: 700px;
+}
+#campaign-pop .pop-inner .pop-box .pop-detail strong {
+  font-size: 14px;
+}
+
+/*================================================================================
+  SMART DIVECE
+================================================================================*/
+.iPhone .pop-detail,
+.iPad .pop-detail,
+.Android .pop-detail {
+  width: 650px !important;
+  margin-right: 50px !important;
+}
+
+/* =====================================================================================
+  common class
+
+  update: 13/12/15
+  
+  memo  : 
+        通常フォント：font-size: 14px -> line-height: 24px; 
+        見出し：    font-size: ---; -> line-height: ---; margin: ---; padding: ---;
+        中見出し： font-size: ---; -> line-height: ---;
+        
+        @include size(0,0);
+        @include absolute(0,0,0);
+        @include fixed(0,0,0);
+        @extend .clearfix;
+        background: url("../img/bg_frame.png") repeat-y center top;
+        background: url("../img/top/main_visual.jpg") no-repeat center top;
+
+====================================================================================== */
+#format {
+  color: #727171;
+  line-height: 1.6;
+}
+#format #htmlContainer {
+  background: url("../img/bg_secondary.jpg") no-repeat center top;
+  padding-top: 95px;
+}
+#format #main {
+  width: 100%;
+  min-height: 650px;
+  background-image:url("../img/bg_contents02.png") ,url("../img/bg_contents02.png") ,url("../img/bg_contents02.png");
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: center top, center 840px, center 1680px;
+  /*background: url("../img/bg_contents02.png") no-repeat center top;*/
+}
+#format #main h2 {
+  margin-bottom: 20px;
+}
+#format #main h3 {
+  background: url("../img/icon_title_arw.png") no-repeat 0 3px;
+  padding-left: 25px;
+  font-size: 18px;
+  color: #EF5781;
+  margin-bottom: 15px;
+}
+#format #main a:link, #format #main a:visited {
+  color: #148CDD;
+  text-decoration: underline;
+}
+#format #main a:hover, #format #main a:active {
+  color: #5AAEE7;
+  text-decoration: none;
+}
+
+#main_side_banner {
+	position:relative;
+}
+#main_side_banner li {
+	position:absolute;
+	top:7px;
+	left:8px;
+	width:473px;
+	height:85px;
+	background-size: 473px 85px;
+}
+
+/*================================================================================
+  SMART DIVECE
+================================================================================*/
+
+
+.inner2 {
+	background-color:#FFFFFF !important;
+	margin:0 !important;
+	padding:0 !important;
+	overflow:hidden;
+	width:100%;
+	min-width:100%;
+}
+
+.inner940 {
+	background:none !important;
+}
+.iPhone #main {
+	background-position: center top;
+}
+
+#op_link { text-align: center; margin: 5px 0 0;}
+
+/* index */
+.inner-left, .inner-right  { margin:0;  padding: 0; }
+.inner-left { width:580px; float: left; } 
+.inner-right { width: 380px; float:right;}

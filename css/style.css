@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+/*================================================================================
+	FORMAT
+================================================================================*/
+p {
+margin-bottom:1em;
+}
+
+#movie001 a {
+width:150px;
+height:84px;
+display:block;
+background:url('img/opmovie1.jpg');
+}
+#movie001 a:hover {
+width:150px;
+height:84px;
+display:block;
+background:url('img/opmovie1_U.jpg');
+}
+
+#impression_text {
+width:100%;
+height:200px;
+}
+
+#impression_send {
+margin-top:20px;
+width:100px;
+height:30px;
+}
+#impression_select {
+width:300px;
+}
+.screen-reader-response, .wpcf7-response-output  {
+margin:1em 0;
+font-size:1.4em;
+color:red;
+}
+
+.wpcf7-form-control {
+width:80%;
+}
+
+.wpcf7-submit {
+font-size:2em;
+font-weight:bold;
+padding:10px;
+}
+
+.alignleft {
+	float: left;
+margin-right:1em;
+margin-bottom:1em;
+}
+.alignright {
+	float: right;
+margin-bottom:1em;
+}
+.alignnone {
+margin-bottom:1em;
+}
+.aligncenter {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+margin-bottom:1em;
+}
+.text {
+font-size:1.1em;
+}
+.date {
+font-size:1.1em;
+}
